@@ -19,3 +19,14 @@ export const fibonacciArray = (iterations) => {
   // return calculated values
   return values
 }
+
+export const fibonacciArrayFrom = (length) => {
+  let [prev, next, soma] = [0, 1, 0]
+  return Array.from({ length }, () => {
+    soma = prev + next
+    prev = next
+    next = soma
+
+    return soma
+  })
+}
