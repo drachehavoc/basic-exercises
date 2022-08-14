@@ -26,7 +26,6 @@ export const fibonacciArrayFrom = (length) => {
     soma = prev + next
     prev = next
     next = soma
-
     return soma
   })
 }
