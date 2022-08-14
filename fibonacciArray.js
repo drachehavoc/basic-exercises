@@ -1,6 +1,6 @@
-export const fibonacciArray = (times) => {
+export const fibonacciArray = (iterations) => {
   // check if times is valid
-  if (times <= 0)
+  if (iterations <= 0)
     throw "Não são permitidos numeros menores ou iguais a zero"
 
   // first values (we need almost 2)
@@ -8,19 +8,13 @@ export const fibonacciArray = (times) => {
 
   // if times is minor than the lenght of pre-caculated \
   // values just return the correct portion
-  if (times < values.length) {
-    return values.splice(0, times)
-  }
-
-  // jumps the pre calculated values
-  times -= values.length
+  if (iterations < values.length)
+    return values.splice(0, iterations)
 
   // calc next values
-  while (times--) {
-    let lastIdx = values.length - 1
-    let prevIdx = lastIdx - 1
-    values.push(values[lastIdx] + values[prevIdx])
-  }
+  let idx = values.length - 1
+  for (; idx < iterations; idx++)
+    values.push(values[idx] + values[idx - 1])
 
   // return calculated values
   return values

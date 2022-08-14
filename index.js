@@ -1,6 +1,5 @@
 // import { fibonacciArray } from "./fibonacciArray.js"
-// console.log(fibonacciArray(10))
-
+// console.log(fibonacciArray(20))
 
 // import { fibonacciConsole } from "./fibonacciConsole.js"
 // fibonacciConsole(10)
