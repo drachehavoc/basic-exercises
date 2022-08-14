@@ -21,11 +21,11 @@ export const fibonacciArray = (iterations) => {
 }
 
 export const fibonacciArrayFrom = (length) => {
-  let [prev, next, soma] = [0, 1, 0]
+  let [prev, next, total] = [0, 1, 0]
   return Array.from({ length }, () => {
-    soma = prev + next
+    total = prev + next
     prev = next
-    next = soma
-    return soma
+    next = total
+    return total
   })
 }
