@@ -16,3 +16,6 @@ export const isPrime = (num) => {
   // if it passes all test and is bigger than 1, so is prime
   return num > 1;
 }
+
+const numList = Array.from({ length: 200 }, (_, i) => i)
+console.log(numList.filter((v) => isPrime(v)))

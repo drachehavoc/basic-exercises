@@ -1,11 +1,15 @@
-export const fibonacciConsole = (times) => {
-  let [prev, next] = [0, 1]
+const fibonacciConsole = (times) => {
+  let [prev, curr, sum] = [0, 1, 0]
   console.log(prev)
-  console.log(next)
-
+  console.log(curr)
+  times -= 2
+  
   while (times--) {
-    if (prev == 0 || prev == 1)
-      console.log(next += prev)
-    prev = next
+    sum = prev + curr
+    prev = curr
+    curr = sum
+    console.log(sum)
   }
 }
+
+fibonacciConsole(20)
